@@ -7,4 +7,8 @@ using UnityEngine;
 public class D_MoveState : ScriptableObject
 {
     public float movementSpeed = 3.0f;
+
+    public float movementJump = 5.0f;
+
+    public Vector2 movementJumpVec;
 }

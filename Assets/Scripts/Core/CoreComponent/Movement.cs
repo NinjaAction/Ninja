@@ -66,6 +66,15 @@ public class Movement : CoreComponent
         SetFinalVelocity();
     }
 
+    public void SetVelocity(Vector2 direction,int angle)
+    {
+        direction.x *= angle;
+        workspace = direction;
+        SetFinalVelocity();
+    }
+
+    
+
     public void SetVelocityX(float velocity)
     {
 

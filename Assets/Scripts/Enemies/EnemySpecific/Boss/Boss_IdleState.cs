@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class E1_IdleState : IdleState
+public class Boss_IdleState : IdleState
 {
-    private Enemy1 enemy;
-    public E1_IdleState(Entity etity, FinteStateMachine stateMachine, string animBoolName, D_IdleState stateData,Enemy1 enemy) : base(etity, stateMachine, animBoolName,stateData)
+    private Boss boss;
+    public Boss_IdleState(Entity etity, FinteStateMachine stateMachine, string animBoolName, D_IdleState stateData, Boss boss) : base(etity, stateMachine, animBoolName, stateData)
     {
-        this.enemy = enemy;
+        this.boss = boss;
     }
 
+   
 
     public override void Enter()
     {
         base.Enter();
-
     }
 
     public override void Exit()
@@ -27,18 +27,16 @@ public class E1_IdleState : IdleState
         base.LogicUpdate();
         if (isPlayerInMinAgroRange)
         {
-            stateMachine.ChangeState(enemy.playerDetectedState);
+            stateMachine.ChangeState(boss.playerDetectedState);
         }
         else if (isIdleTimeOver)
         {
-            stateMachine.ChangeState(enemy.moveState);
+            stateMachine.ChangeState(boss.moveState);
         }
     }
-
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-
     }
 }

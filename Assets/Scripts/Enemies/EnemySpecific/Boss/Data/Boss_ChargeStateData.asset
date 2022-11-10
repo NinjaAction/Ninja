@@ -9,13 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eda356c44969414a98868cf4a07ba32, type: 3}
-  m_Name: E1_MeleeAttackData
+  m_Script: {fileID: 11500000, guid: 46bbf9d5e6f5b384b98f8a849b349c15, type: 3}
+  m_Name: Boss_ChargeStateData
   m_EditorClassIdentifier: 
-  attackRadius: 0.75
-  attackDamage: 30
-  knockbackAngle: {x: 1, y: 1}
-  knockbackStrength: 10
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 2048
+  chargeSpeed: 6
+  chargeTime: 0.5

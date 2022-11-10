@@ -18,6 +18,7 @@ public class MoveState : State
     protected bool isDetectingLedge;
 
     protected bool isPlayerInMinAgroRange;
+    protected bool isPlayerInMaxAgroRange;
 
     public MoveState(Entity etity,FinteStateMachine stateMachine,string animBoolName, D_MoveState stateDate) : base(etity, stateMachine, animBoolName)
     {
@@ -32,6 +33,7 @@ public class MoveState : State
             isDetectingLedge = CollisionSenses.LedgeVertical;
             isDetectingWall = CollisionSenses.WallFront;
             isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
+            isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
         }
         
         

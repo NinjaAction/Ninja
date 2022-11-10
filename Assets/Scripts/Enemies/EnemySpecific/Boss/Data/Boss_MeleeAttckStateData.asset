@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9eda356c44969414a98868cf4a07ba32, type: 3}
-  m_Name: E1_MeleeAttackData
+  m_Name: Boss_MeleeAttckStateData
   m_EditorClassIdentifier: 
-  attackRadius: 0.75
+  attackRadius: 2.5
   attackDamage: 30
   knockbackAngle: {x: 1, y: 1}
   knockbackStrength: 10

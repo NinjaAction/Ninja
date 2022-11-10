@@ -2,17 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class E1_PlayerDetectedState : PlayerDetectedState
+public class Boss_PlayerdetectedState : PlayerDetectedState
 {
-    private Enemy1 enemy;
-
-    
-
-
-    public E1_PlayerDetectedState(Entity etity, FinteStateMachine stateMachine, string animBoolName, D_PlayerDetected stateData, Enemy1 enemy) : base(etity, stateMachine, animBoolName, stateData)
+    private Boss boss;
+    public Boss_PlayerdetectedState(Entity etity, FinteStateMachine stateMachine, string animBoolName, D_PlayerDetected stateData, Boss boss) : base(etity, stateMachine, animBoolName, stateData)
     {
-        this.enemy = enemy;
-      
+        this.boss = boss;
     }
 
     public override void Enter()
@@ -31,21 +26,24 @@ public class E1_PlayerDetectedState : PlayerDetectedState
 
         if (performCloseRangeAction)
         {
-            stateMachine.ChangeState(enemy.meleeAttackState);
+            stateMachine.ChangeState(boss.meleeAttackState);
         }
         else if (performLongRangeAction)
         {
-           
-            stateMachine.ChangeState(enemy.chargeState);
+            stateMachine.ChangeState(boss.chargeState);
         }
         else if (!isPlayerInMaxAgroRange)
         {
-            stateMachine.ChangeState(enemy.lookForPlayerState);
+            stateMachine.ChangeState(boss.lookForPlayerState);
+        }
+        else if (isPlayerInMaxAgroRange)
+        {
+            stateMachine.ChangeState(boss.jumpAttackState);
         }
         else if (!isDetectingLedge)
         {
             Movement?.Flip();
-            stateMachine.ChangeState(enemy.moveState);
+            stateMachine.ChangeState(boss.moveState);
         }
 
 
@@ -56,8 +54,5 @@ public class E1_PlayerDetectedState : PlayerDetectedState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-
-
-        
     }
 }
