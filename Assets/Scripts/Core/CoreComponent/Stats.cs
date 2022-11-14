@@ -10,6 +10,8 @@ public class Stats : CoreComponent
     [SerializeField] private float maxHealth;
     private float currentHealth;
 
+    private Boss boss;
+
     protected override void Awake()
     {
         base.Awake();
@@ -25,9 +27,10 @@ public class Stats : CoreComponent
         {
             currentHealth = 0;
 
-            OnHealthZero?.Invoke();
-
-
+            OnHealthZero?.Invoke();           
+            
+                       
+            
 
             Debug.Log("Health is zero!");
         }

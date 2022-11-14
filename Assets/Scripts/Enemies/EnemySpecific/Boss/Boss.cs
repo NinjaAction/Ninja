@@ -39,7 +39,7 @@ public class Boss : Entity
     [SerializeField]
     private Transform meleeAttackPosition;
 
-
+    public bool alive;
 
 
     public override void Awake()
@@ -62,6 +62,7 @@ public class Boss : Entity
     private void Start()
     {
         stateMachine.Initialize(moveState);
+        alive = true;
     }
 
 
@@ -71,5 +72,11 @@ public class Boss : Entity
 
 
         Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackStateData.attackRadius);
+    }
+
+
+    public bool Alive()
+    {
+        return alive;
     }
 }

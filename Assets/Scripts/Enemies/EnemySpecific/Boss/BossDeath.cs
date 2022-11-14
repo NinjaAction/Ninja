@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class Death : CoreComponent
+public class BossDeath : CoreComponent
 {
     [SerializeField] private GameObject[] deathparticles;
 
@@ -12,11 +14,11 @@ public class Death : CoreComponent
 
     public void Die()
     {
-        foreach(var particle in deathparticles)
+        foreach (var particle in deathparticles)
         {
             ParticleManager.StartParticles(particle);
         }
-        GameObject.Find("Canvas").GetComponent<ScoreController>().AddScore();
+        GameObject.Find("Canvas").GetComponent<ScoreController>().AddScoreBoss();
 
         core.transform.parent.gameObject.SetActive(false);
     }
