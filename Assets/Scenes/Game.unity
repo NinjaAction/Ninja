@@ -1849,7 +1849,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.9564428, y: 1}
+    m_SensorSize: {x: 2.3473685, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -52065,8 +52065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 1477318523}
-  player: {fileID: 2700580642707430686, guid: 6ae8e9832aa04564c8ca2c351cdac114, type: 3}
-  respawnTime: 5
+  player: {fileID: 1303461317}
 --- !u!4 &1701695678
 Transform:
   m_ObjectHideFlags: 0
