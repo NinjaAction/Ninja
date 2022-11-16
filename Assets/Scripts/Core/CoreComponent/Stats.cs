@@ -36,6 +36,11 @@ public class Stats : CoreComponent
         }
     }
 
+    public float GetHP()
+    {
+        return currentHealth;
+    }
+
 
     public void IncreaseHealth(float amount)
     {

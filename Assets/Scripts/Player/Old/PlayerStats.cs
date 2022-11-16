@@ -33,6 +33,8 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+   
+
 
     private void Die()
     {

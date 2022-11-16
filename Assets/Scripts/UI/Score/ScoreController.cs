@@ -12,7 +12,7 @@ public class ScoreController : MonoBehaviour
     void Start()
     {
         this.textComponent = GameObject.Find("Score").GetComponent<Text>();
-        this.textComponent.text = "Score " + score.ToString();
+        this.textComponent.text = "Score: " + score.ToString();
     }
 
     // Update is called once per frame
@@ -24,12 +24,12 @@ public class ScoreController : MonoBehaviour
     public void AddScore()
     {
         this.score += 300;
-        this.textComponent.text = "Score " + score.ToString();
+        this.textComponent.text = "Score: " + score.ToString();
     }
 
     public void AddScoreBoss()
     {
         this.score += 3000;
-        this.textComponent.text = "Score " + score.ToString();
+        this.textComponent.text = "Score: " + score.ToString();
     }
 }

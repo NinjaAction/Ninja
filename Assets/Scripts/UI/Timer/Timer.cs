@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     private float countTime = 0;
-    private int SetTimer;
+    private float SetTimer;
 
     // Use this for initialization
     void Start()
@@ -20,7 +20,7 @@ public class Timer : MonoBehaviour
         // countTimeに、ゲームが開始してからの秒数を格納
         countTime += Time.deltaTime;
 
-        SetTimer = 180 - (int)countTime;
+        SetTimer = 180.0f - countTime;
 
         // 小数2桁にして表示
         GetComponent<Text>().text = SetTimer.ToString("F2");
