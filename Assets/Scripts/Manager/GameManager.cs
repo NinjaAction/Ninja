@@ -48,5 +48,6 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
         }
+        
     }
 }

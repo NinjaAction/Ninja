@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class BossDeath : CoreComponent
 {
@@ -19,6 +21,8 @@ public class BossDeath : CoreComponent
             ParticleManager.StartParticles(particle);
         }
         GameObject.Find("Canvas").GetComponent<ScoreController>().AddScoreBoss();
+
+        SceneManager.LoadScene("GameClear", LoadSceneMode.Single);
 
         core.transform.parent.gameObject.SetActive(false);
     }
